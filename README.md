@@ -69,21 +69,22 @@ Go Modules (go 1.13 设为默认)
 
 # 基础数据类型
 <table>
-<thead><tr><th>java</th><th>go</th></tr></thead>
+<thead>
+<tr>
+<th>java</th>
+<th>go</th>
+<th>占用内存</th>
+<th>取值范围</th>
+</tr>
+</thead>
 <tbody>
-<tr><td>
+<tr>
+<td>byte</td>
+<td>int8</td>
+<td>1 字节</td>
+<td>-128~127</td>
+</tr>
 
-```java
-
-```
-
-</td><td>
-
-```go
-
-```
-
-</td></tr>
 </tbody></table>
 
 # 集合
@@ -187,15 +188,15 @@ Go Modules (go 1.13 设为默认)
 <tbody>
 <tr><td>
 
-```java
 
-```
+- spring-boot-web
+
 
 </td><td>
 
-```go
 
-```
+- Gin
+
 
 </td></tr>
 </tbody></table>
@@ -206,15 +207,15 @@ Go Modules (go 1.13 设为默认)
 <tbody>
 <tr><td>
 
-```java
 
-```
+- MyBatis
+
 
 </td><td>
 
-```go
 
-```
+- Gorm
+
 
 </td></tr>
 </tbody></table>
