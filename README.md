@@ -48,24 +48,51 @@ Go Modules (go 1.13 设为默认)
 </td></tr>
 </tbody></table>
 
-# 声明方式
+# 声明方式及赋值
+
+
+## 变量
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
 <tr><td>
 
 ```java
-
+int num = 0; //int
 ```
 
 </td><td>
 
 ```go
+var num int // int
+num = 0
 
+num1 := 0 // int
 ```
 
 </td></tr>
-</tbody></table>
+</tbody>
+</table>
+
+## 常量
+<table>
+<thead><tr><th>java</th><th>go</th></tr></thead>
+<tbody>
+<tr><td>
+
+```java
+private static int NUM = 0; //int
+```
+
+</td><td>
+
+```go
+const num = 0
+```
+
+</td></tr>
+</tbody>
+</table>
 
 # 基础数据类型
 <table>
