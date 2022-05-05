@@ -149,15 +149,15 @@ const num = 0
 
 <tr>
 <td>char</td>
-<td>int8</td>
-<td>2  byte</td>
+<td>rune</td>
+<td>java 2 byte; go 4 byte</td>
  
 </tr>
 
 <tr>
 <td>boolean</td>
 <td>bool</td>
-<td>4  byte</td>
+<td>1 byte</td>
  
 </tr>
 
