@@ -95,21 +95,70 @@ const num = 0
 </table>
 
 # 基础数据类型
+基础数据类型是CPU可以直接进行运算的类型
 <table>
 <thead>
 <tr>
 <th>java</th>
 <th>go</th>
 <th>占用内存</th>
-<th>取值范围</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>byte</td>
+<td>byte/uint8</td>
+<td>1  byte</td>
+ 
+</tr>
+
+<tr>
+<td>short</td>
+<td>int16</td>
+<td>2  byte</td>
+ 
+</tr>
+
+<tr>
+<td>int</td>
+<td>int/int32/int64</td>
+<td>java 4 byte; go 4/8  byte(Platform dependent)</td>
+ 
+</tr>
+
+<tr>
+<td>long</td>
+<td>int64</td>
+<td>8  byte</td>
+ 
+</tr>
+
+<tr>
+<td>float</td>
+<td>float32</td>
+<td>4  byte</td>
+ 
+</tr>
+
+<tr>
+<td>double</td>
+<td>float64</td>
+<td>8  byte</td>
+ 
+</tr>
+
+<tr>
+<td>char</td>
 <td>int8</td>
-<td>1 字节</td>
-<td>-128~127</td>
+<td>2  byte</td>
+ 
+</tr>
+
+<tr>
+<td>boolean</td>
+<td>bool</td>
+<td>4  byte</td>
+ 
 </tr>
 
 </tbody></table>
