@@ -48,52 +48,6 @@ Go Modules (go 1.13 设为默认)
 </td></tr>
 </tbody></table>
 
-# 声明方式及赋值
-
-
-## 变量
-<table>
-<thead><tr><th>java</th><th>go</th></tr></thead>
-<tbody>
-<tr><td>
-
-```java
-int num = 0; //int
-```
-
-</td><td>
-
-```go
-var num int // int
-num = 0
-
-num1 := 0 // int
-```
-
-</td></tr>
-</tbody>
-</table>
-
-## 常量
-<table>
-<thead><tr><th>java</th><th>go</th></tr></thead>
-<tbody>
-<tr><td>
-
-```java
-private static int NUM = 0; //int
-```
-
-</td><td>
-
-```go
-const num = 0
-```
-
-</td></tr>
-</tbody>
-</table>
-
 # 基础数据类型
 基础数据类型是CPU可以直接进行运算的类型
 <table>
@@ -162,6 +116,58 @@ const num = 0
 </tr>
 
 </tbody></table>
+
+# 声明方式及赋值
+
+
+## 变量
+type: 类型
+
+identifier: 标识符、变量名
+
+value: 值
+<table>
+<thead><tr><th>java</th><th>go</th></tr></thead>
+<tbody>
+<tr><td>
+
+```java
+type identifier;
+type identifier = value;
+```
+
+</td><td>
+
+```go
+var identifier type
+var identifier type = value
+var identifier = value
+identifier := value
+```
+
+</td></tr>
+</tbody>
+</table>
+
+## 常量
+<table>
+<thead><tr><th>java</th><th>go</th></tr></thead>
+<tbody>
+<tr><td>
+
+```java
+private static int NUM = 0; //int
+```
+
+</td><td>
+
+```go
+const num = 0
+```
+
+</td></tr>
+</tbody>
+</table>
 
 # 集合
 <table>
