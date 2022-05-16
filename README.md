@@ -170,23 +170,32 @@ const num = 0
 </table>
 
 # 集合
+## List
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
 <tr><td>
 
 ```java
-
+List<T> list1 = new ArrayList<>(); 
+List<T> list2 = new LinkedList<>();
 ```
 
 </td><td>
 
 ```go
-
+list1 = make([]T, len(xx));  // array list
+var list2 list.List // linked list
+list2.pushBack()
+for e := list2.Front(); e != nil; e=e.Next() {
+        fmt.Println(e.Value.(xx))
+    }
 ```
 
 </td></tr>
 </tbody></table>
+
+
 
 # I/O
 <table>
