@@ -195,6 +195,26 @@ for e := list2.Front(); e != nil; e=e.Next() {
 </td></tr>
 </tbody></table>
 
+## Set
+<table>
+<thead><tr><th>java</th><th>go</th></tr></thead>
+<tbody>
+<tr><td>
+
+```java
+Set<T> set = new HashSet<>(); 
+```
+
+</td><td>
+
+```go
+type void struct{}
+var x void
+set := make(map[T]void)
+```
+
+</td></tr>
+</tbody></table>
 
 
 # I/O
