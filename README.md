@@ -195,6 +195,27 @@ for e := list2.Front(); e != nil; e=e.Next() {
 </td></tr>
 </tbody></table>
 
+## Map
+<table>
+<thead><tr><th>java</th><th>go</th></tr></thead>
+<tbody>
+<tr><td>
+
+```java
+Map<T,T> map = new HashMap<>();
+map.put(T,T);
+```
+
+</td><td>
+
+```go
+maps := make(map[T]T)
+maps[T] = T
+```
+
+</td></tr>
+</tbody></table>
+
 ## Set
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
