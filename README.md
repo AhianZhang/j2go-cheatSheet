@@ -204,6 +204,7 @@ for e := list2.Front(); e != nil; e=e.Next() {
 ```java
 Map<T,T> map = new HashMap<>();
 map.put(T,T);
+T t = map.get(T);
 ```
 
 </td><td>
@@ -211,6 +212,11 @@ map.put(T,T);
 ```go
 maps := make(map[T]T)
 maps[T] = T
+x, ok := maps[T]
+if ok {
+    //do somethings...
+}
+
 ```
 
 </td></tr>
