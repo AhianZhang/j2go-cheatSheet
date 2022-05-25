@@ -283,12 +283,21 @@ set := make(map[T]void)
 </tbody></table>
 
 # 并发
+## 锁
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
 <tr><td>
 
 ```java
+Lock lock = new ReentrantLock();
+if(lock.tryLock()){
+    try{
+        // do something...
+    } finally{
+        lock.unlock();
+    }
+}
 
 ```
 
