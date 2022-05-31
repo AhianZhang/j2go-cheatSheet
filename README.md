@@ -169,6 +169,31 @@ const num = 0
 </tbody>
 </table>
 
+# 循环控制
+## for
+<table>
+<thead><tr><th>java</th><th>go</th></tr></thead>
+<tbody>
+<tr><td>
+
+```java
+for(int i = 0; i < arr.length; i++){
+    //...
+}
+```
+
+</td><td>
+
+```go
+for i := 0; i < len(arr); i++ {
+    //...
+}
+```
+
+</td></tr>
+</tbody>
+</table>
+
 # 集合
 ## List
 <table>
