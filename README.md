@@ -194,6 +194,31 @@ for i := 0; i < len(arr); i++ {
 </tbody>
 </table>
 
+## while
+<table>
+<thead><tr><th>java</th><th>go</th></tr></thead>
+<tbody>
+<tr><td>
+
+```java
+int i = 0;
+while(i < 10){
+    //...
+}
+```
+
+</td><td>
+
+```go
+for i := 0; i < 10; i++ {
+    //...
+}
+```
+
+</td></tr>
+</tbody>
+</table>
+
 # 集合
 ## List
 <table>
