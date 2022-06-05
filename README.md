@@ -219,6 +219,45 @@ for i := 0; i < 10; i++ {
 </tbody>
 </table>
 
+## switch
+<table>
+<thead><tr><th>java</th><th>go</th></tr></thead>
+<tbody>
+<tr><td>
+
+```java
+int i = 0;
+switch(i){
+case 1:
+    System.out.println("1");
+case 2:
+    System.out.println("2");
+case 3:
+    System.out.println("3");
+default:
+    System.out.println("0");
+}
+```
+
+</td><td>
+
+```go
+i := 0
+switch i {
+case 1:
+    fmt.Println("1")
+case 2:
+    fmt.Println("2")
+case 3:
+    fmt.Println("3")
+default:
+    fmt.Println("0")
+```
+
+</td></tr>
+</tbody>
+</table>
+
 # 集合
 ## List
 <table>
