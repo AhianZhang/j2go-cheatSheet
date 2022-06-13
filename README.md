@@ -193,6 +193,32 @@ for i := 0; i < len(arr); i++ {
 </td></tr>
 </tbody>
 </table>
+## for
+<table>
+<thead><tr><th>java</th><th>go</th></tr></thead>
+<tbody>
+<tr><td>
+
+```java
+String s = "abc";
+for(int i : s.toCharArray()){
+    //...
+}
+```
+
+</td><td>
+
+```go
+s := "abc"
+
+for i,v := range s {
+    //...
+}
+```
+
+</td></tr>
+</tbody>
+</table>
 
 ## while
 <table>
