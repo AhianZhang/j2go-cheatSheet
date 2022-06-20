@@ -428,18 +428,86 @@ if(lock.tryLock()){
 </tbody></table>
 
 # *面向对象编程
+
+## 函数
+函数是能给调用者返回一些需要的值，可以在任何地方使用
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
 <tr><td>
 
 ```java
+class Door{
+    private String size;
+    public void open(){
+        System.out.println("door opened");
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+}
 
 ```
 
 </td><td>
 
 ```go
+
+type Door struct {
+  size string
+}
+func (door *Door) setSize(){
+ door.size = "big"
+}
+func (door *Door) getSize(){
+  fmt.Println("door size is:",door.size)
+}
+
+```
+
+</td></tr>
+</tbody></table>
+
+## 方法
+方法是被定义在类内部，能去修改类的属性，注重类的概念
+<table>
+<thead><tr><th>java</th><th>go</th></tr></thead>
+<tbody>
+<tr><td>
+
+```java
+class Door{
+    private String size;
+    public void open(){
+        System.out.println("door opened");
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+}
+```
+
+</td><td>
+
+```go
+
+type Door struct {
+  size string
+}
+func open(){
+  fmt.Println("door opened")
+  
+}
 
 ```
 
