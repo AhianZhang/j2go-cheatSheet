@@ -193,7 +193,8 @@ for i := 0; i < len(arr); i++ {
 </td></tr>
 </tbody>
 </table>
-## for
+
+## for 增强
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
