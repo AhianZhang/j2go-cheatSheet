@@ -517,6 +517,92 @@ func (door *Door) getSize(){
 </td></tr>
 </tbody></table>
 
+# 接口
+golang 中没有显示的实现
+<table>
+<thead><tr><th>java</th><th>go</th></tr></thead>
+<tbody>
+<tr><td>
+
+```java
+public class TestInterface {
+    public static void main(String[] args) {
+        System.out.println("light");
+        CarLight carLight = new CarLight();
+        carLight.turnOn();
+        carLight.turnOff();
+
+    }
+}
+
+interface Light {
+    void turnOn();
+
+    void turnOff();
+}
+
+class CarLight implements Light {
+
+    @Override
+    public void turnOn() {
+        System.out.println("turn on");
+    }
+
+    @Override
+    public void turnOff() {
+        System.out.println("turn off");
+    }
+}
+```
+
+
+</td><td>
+
+```golang
+type light interface {
+	TurnOn()
+	TurnOff()
+}
+
+type CarLight struct{}
+
+func (carLigth CarLight) TurnOn() {
+	fmt.Println("trun on")
+}
+func (carLight CarLight) TurnOff() {
+	fmt.Println("turn off")
+}
+func main() {
+	var carLight CarLight
+	fmt.Println("light")
+	carLight.TurnOn()
+	carLight.TurnOff()
+
+}
+```
+
+
+
+</td></tr>
+</tbody></table>
+
+
+# 序列化
+<table>
+<thead><tr><th>java</th><th>go</th></tr></thead>
+<tbody>
+<tr><td>
+
+
+
+</td><td>
+
+
+
+
+</td></tr>
+</tbody></table>
+
 # 服务器
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
