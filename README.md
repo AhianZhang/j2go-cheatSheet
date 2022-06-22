@@ -132,8 +132,10 @@ value: 值
 <tr><td>
 
 ```java
+	
 type identifier;
 type identifier = value;
+	
 ```
 
 </td><td>
