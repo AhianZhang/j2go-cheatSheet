@@ -10,9 +10,7 @@ java 转 go 快速对照表，建议搭配 [smart TOC](https://chrome.google.com
 > 说明：目录中带星号 * 的代表这部分内容是针对于 java 侧来说的，在 golang 领域可能没有此概念
 
 
-```golang
-var a int
-```
+
 
 # 三方依赖仓库地址
 <table>
@@ -292,6 +290,7 @@ default:
 
 # 集合
 ## List
+
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
@@ -317,6 +316,7 @@ for e := list2.Front(); e != nil; e=e.Next() {
 </tbody></table>
 
 ## Map
+	
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
@@ -344,6 +344,7 @@ if ok {
 </tbody></table>
 
 ## Set
+	
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
@@ -366,7 +367,9 @@ set := make(map[T]void)
 
 
 # I/O
+	
 ## 文件读写
+	
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
@@ -386,6 +389,7 @@ set := make(map[T]void)
 </tbody></table>
 
 # 字符串处理
+	
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
@@ -405,8 +409,10 @@ set := make(map[T]void)
 </tbody></table>
 
 # 并发
+	
 ## 锁
 <table>
+	
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
 <tr><td>
@@ -433,9 +439,11 @@ if(lock.tryLock()){
 </tbody></table>
 
 # *面向对象编程
+	
 面向对象是以对象为核心向外拓展的，可以理解为现实环境中的映射。在 java 中表示为 Class，在 golang 中表示为 struct。在设计时会将对象能力通过方法的形式整合在一起并通过权限控制来加强封装，使用接口 interface 来实现多态。
 
 ## 函数
+	
 函数是能给调用者返回一些需要的值，可以在任何地方使用
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
@@ -478,7 +486,9 @@ func open(){
 </tbody></table>
 
 ## 方法
+	
 方法是被定义在类内部，能去修改类的属性，注重类的概念
+	
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
@@ -522,7 +532,9 @@ func (door *Door) getSize(){
 </tbody></table>
 
 # 接口
+	
 golang 中没有显示的实现
+	
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
@@ -592,6 +604,7 @@ func main() {
 
 
 # 序列化
+	
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
@@ -608,6 +621,7 @@ func main() {
 </tbody></table>
 
 # 服务器
+	
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
@@ -624,6 +638,7 @@ func main() {
 </tbody></table>
 
 # ORM 工具
+	
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
