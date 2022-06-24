@@ -303,7 +303,7 @@ List<T> list2 = new LinkedList<>();
 </td><td>
 
 ```go
-list1 = make([]T, len(xx));  // array list
+list1 := make([]T, len(xx));  // array list
 var list2 list.List // linked list
 list2.pushBack()
 for e := list2.Front(); e != nil; e=e.Next() {
