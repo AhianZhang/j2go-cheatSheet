@@ -10,6 +10,10 @@ java 转 go 快速对照表，建议搭配 [smart TOC](https://chrome.google.com
 > 说明：目录中带星号 * 的代表这部分内容是针对于 java 侧来说的，在 golang 领域可能没有此概念
 
 
+```golang
+var a int
+```
+
 # 三方依赖仓库地址
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
