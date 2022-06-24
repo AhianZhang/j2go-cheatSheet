@@ -132,15 +132,13 @@ value: 值
 <tr><td>
 
 ```java
-	
 type identifier;
-type identifier = value;
-	
+type identifier = value;	
 ```
 
 </td><td>
 
-```go
+```golang
 var identifier type
 var identifier type = value
 var identifier = value
