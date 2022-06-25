@@ -11,7 +11,7 @@ func main() {
 func deferReturnPanicFun() int {
 
 	defer deferFuc()
-	panicFun()
+	// panicFun()
 	return returnFuc()
 
 }

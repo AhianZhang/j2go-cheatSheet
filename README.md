@@ -402,33 +402,7 @@ set := make(map[T]void)
 </td></tr>
 </tbody></table>
 
-# 并发
-## 锁
-<table>
-<thead><tr><th>java</th><th>go</th></tr></thead>
-<tbody>
-<tr><td>
 
-```java
-Lock lock = new ReentrantLock();
-if(lock.tryLock()){
-    try{
-        // do something...
-    } finally{
-        lock.unlock();
-    }
-}
-
-```
-
-</td><td>
-
-```go
-
-```
-
-</td></tr>
-</tbody></table>
 
 # *面向对象编程
 面向对象是以对象为核心向外拓展的，可以理解为现实环境中的映射。在 java 中表示为 Class，在 golang 中表示为 struct。在设计时会将对象能力通过方法的形式整合在一起并通过权限控制来加强封装，使用接口 interface 来实现多态。
@@ -588,6 +562,84 @@ func main() {
 </td></tr>
 </tbody></table>
 
+## 封装
+
+<table>
+<thead><tr><th>java</th><th>go</th></tr></thead>
+<tbody>
+<tr><td>
+
+
+
+</td><td>
+
+
+
+
+</td></tr>
+</tbody></table>
+
+## 继承
+
+<table>
+<thead><tr><th>java</th><th>go</th></tr></thead>
+<tbody>
+<tr><td>
+
+
+
+</td><td>
+
+
+
+
+</td></tr>
+</tbody></table>
+
+## 多态
+
+<table>
+<thead><tr><th>java</th><th>go</th></tr></thead>
+<tbody>
+<tr><td>
+
+
+
+</td><td>
+
+
+
+
+</td></tr>
+</tbody></table>
+
+# 并发
+## 锁
+<table>
+<thead><tr><th>java</th><th>go</th></tr></thead>
+<tbody>
+<tr><td>
+
+```java
+Lock lock = new ReentrantLock();
+if(lock.tryLock()){
+    try{
+        // do something...
+    } finally{
+        lock.unlock();
+    }
+}
+
+```
+
+</td><td>
+
+```go
+
+```
+
+</td></tr>
+</tbody></table>
 
 # 序列化
 <table>
