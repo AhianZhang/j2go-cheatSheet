@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 func main() {
 	// 声明方式 1
@@ -50,5 +53,14 @@ func main() {
 	set["a"] = x
 	if _, ok := sets["a"]; ok {
 		fmt.Println("element exist")
+	}
+	// rune alias int32
+	str := "abc"
+	for _, v := range str {
+		fmt.Println(v, reflect.TypeOf(v))
+	}
+	r := []rune(str)
+	for _, v := range r {
+		fmt.Println(v, reflect.TypeOf(v))
 	}
 }
