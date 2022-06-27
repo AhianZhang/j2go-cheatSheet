@@ -59,6 +59,9 @@ func main() {
 	for _, v := range str {
 		fmt.Println(v, reflect.TypeOf(v))
 	}
+	for i := range str {
+		fmt.Println(str[i], reflect.TypeOf(str[i]))
+	}
 	r := []rune(str)
 	for _, v := range r {
 		fmt.Println(v, reflect.TypeOf(v))
