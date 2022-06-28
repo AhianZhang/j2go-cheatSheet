@@ -133,10 +133,11 @@ value: 值
 <tbody>
 <tr><td>
 
-```java
+<code>
 type identifier;
+
 type identifier = value;	
-```
+</code>
 
 </td><td>
 
