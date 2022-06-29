@@ -383,20 +383,23 @@ set := make(map[T]void)
 </td></tr>
 </tbody></table>
 
-# 字符串处理
+# String
+
+## 分割字符串
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
 <tr><td>
 
 ```java
-
+String[] strs = "a,b,c".split(",");
 ```
 
 </td><td>
 
 ```go
-
+// []string
+strs := strings.Split("a,b,c", ",")
 ```
 
 </td></tr>

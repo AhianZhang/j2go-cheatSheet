@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"reflect"
+	"strings"
 	"unicode"
 )
 
@@ -72,4 +73,6 @@ func main() {
 	fmt.Println("IsLower", unicode.IsLower('A'))
 	fmt.Println("IsNumber", unicode.IsNumber('1'))
 	fmt.Println(reflect.TypeOf("1123"[1])) // byte
+	strs := strings.Split("a,b,c", ",")
+	fmt.Println(strs, reflect.TypeOf(strs))
 }
