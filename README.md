@@ -566,7 +566,19 @@ func main() {
 </tbody></table>
 
 ## 封装
+java 和 go 都能够通过一定的规则来控制程序的可见性 scope。
+可见性由低到高：
 
+> java:  default>protect>private>public 
+
+> go: 小写开头(private) > 大写开头(public)
+
+golang 中大小写可以应用到常量、变量、类型、函数、结构体中
+举例：
+```go
+type User struct{...} User 能够被其他包内的代码访问
+type user struct{...} user 只能包内访问
+```
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
