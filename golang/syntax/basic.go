@@ -1,10 +1,9 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
-	"reflect"
-	"strings"
-	"unicode"
+	"os"
 )
 
 func main() {
@@ -56,23 +55,13 @@ func main() {
 	if _, ok := sets["a"]; ok {
 		fmt.Println("element exist")
 	}
-	// rune alias int32
-	str := "abc"
-	for _, v := range str {
-		fmt.Println(v, reflect.TypeOf(v)) //rune
+	// var arg string
+	// arg = os.Args[0]
+	fmt.Println(os.Args[1:])
+	// 命令行
+	input := bufio.NewScanner(os.Stdin)
+	if input.Scan() {
+		fmt.Println(input.Text())
 	}
-	for i := range str {
-		fmt.Println(str[i], reflect.TypeOf(str[i])) //byte
-	}
-	r := []rune(str)
-	for _, v := range r {
-		fmt.Println(v, reflect.TypeOf(v))
-	}
-	fmt.Println("IsLetter", unicode.IsLetter('a'))
-	fmt.Println("IsDigit", unicode.IsDigit('1'))
-	fmt.Println("IsLower", unicode.IsLower('A'))
-	fmt.Println("IsNumber", unicode.IsNumber('1'))
-	fmt.Println(reflect.TypeOf("1123"[1])) // byte
-	strs := strings.Split("a,b,c", ",")
-	fmt.Println(strs, reflect.TypeOf(strs))
+
 }

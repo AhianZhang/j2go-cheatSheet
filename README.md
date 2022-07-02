@@ -364,7 +364,8 @@ set := make(map[T]void)
 
 
 # I/O
-## 文件读写
+## 文件操作
+### 读取文件
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
@@ -377,6 +378,7 @@ set := make(map[T]void)
 </td><td>
 
 ```go
+f, err := ioutil.ReadFile("file path")
 
 ```
 
