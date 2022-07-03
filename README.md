@@ -372,13 +372,13 @@ set := make(map[T]void)
 <tr><td>
 
 ```java
-
+ byte[] bytes = Files.readAllBytes(Paths.get(filePath));
 ```
 
 </td><td>
 
 ```go
-f, err := ioutil.ReadFile("file path")
+f, err := ioutil.ReadFile("file path")//f is []byte
 
 ```
 
