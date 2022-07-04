@@ -289,6 +289,28 @@ default:
 </table>
 
 # 集合
+## Array
+<table>
+<thead><tr><th>java</th><th>go</th></tr></thead>
+<tbody>
+<tr><td>
+
+```java
+int[] arr = new int[10];
+```
+
+</td><td>
+
+```go
+arr := [10]int{} // array
+sli := make([]int, 10) // slice
+
+```
+
+</td></tr>
+</tbody></table>
+
+
 ## List
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>

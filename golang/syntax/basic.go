@@ -64,4 +64,6 @@ func main() {
 		fmt.Println(input.Text())
 	}
 
+	arr := [10]int{}
+	fmt.Println(len(arr))
 }
