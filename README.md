@@ -297,13 +297,19 @@ default:
 
 ```java
 int[] arr = new int[10];
+ Arrays.sort(arr);// sort 默认升序
 ```
 
 </td><td>
 
 ```go
-arr := [10]int{} // array
+arr := [10]int{} // array 非常用
 sli := make([]int, 10) // slice
+sort.Ints(sli) // sort []int
+sort.Slice(sli, func(a, b int) bool { return sli[a] < sli[b] })
+sort.SliceStable(sli, func(a, b int) bool { return sli[a] < sli[b] }) // 如果元素相同保持当前位置不变
+
+
 ```
 
 </td></tr>

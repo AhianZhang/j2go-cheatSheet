@@ -1,5 +1,6 @@
 package syntax;
 
+import java.util.Arrays;
 import java.util.Stack;
 
 public class CollectionsDemo {
@@ -10,5 +11,7 @@ public class CollectionsDemo {
            int top = stack.peek();// inspect
            int topEle = stack.pop();// pop
        }
+       int[] arr = new int[10];
+       Arrays.sort(arr);
    } 
 }
