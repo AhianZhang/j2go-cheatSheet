@@ -304,7 +304,6 @@ int[] arr = new int[10];
 ```go
 arr := [10]int{} // array
 sli := make([]int, 10) // slice
-
 ```
 
 </td></tr>
@@ -384,6 +383,42 @@ set := make(map[T]void)
 </td></tr>
 </tbody></table>
 
+## Stack
+<table>
+<thead><tr><th>java</th><th>go</th></tr></thead>
+<tbody>
+<tr><td>
+
+```java
+      Stack<Integer> stack = new Stack<>();
+       stack.push(1);
+       if(!stack.isEmpty()){
+           int top = stack.peek();// inspect
+           int topEle = stack.pop();// pop
+       }
+```
+
+</td><td>
+
+```go
+	stack := make([]int, 0)
+	stack = append(stack, 1)
+	stack = append(stack, 2)
+	for len(stack) > 0 {
+		topEle := stack[len(stack)-1] // inspect
+		fmt.Println("top element is: ", topEle)
+		stack = stack[:len(stack)-1] // pop
+		fmt.Println("current statck size: ", len(stack))
+
+	}
+	stack = append(stack, 3)
+	fmt.Println(len(stack))
+	stack = stack[:0] // flush
+	fmt.Println(len(stack))
+```
+
+</td></tr>
+</tbody></table>
 
 # I/O
 ## 文件操作
