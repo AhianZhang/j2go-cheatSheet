@@ -526,7 +526,7 @@ strings.HasSuffix(s,"suffix")
 
 # \*面向对象编程
 
-面向对象是以对象为核心向外拓展的，可以理解为现实环境中的映射。在 java 中表示为 Class，在 golang 中表示为 struct。在设计时会将对象能力通过方法的形式整合在一起并通过权限控制来加强封装，使用接口 interface 来实现多态。
+面向对象是以对象为核心向外拓展的，可以理解为现实环境中的映射。在 java 中表示为 Class，在 golang 中表示为 struct。在设计时会将对象能力通过方法的形式整合在一起并通过权限控制来加强封装，使用接口 interface 来隐式实现多态。
 
 ## 函数
 
@@ -620,7 +620,7 @@ func (door *Door) getSize(){
 
 # 接口
 
-golang 中没有显示的实现
+golang 的接口是隐式实现
 
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
