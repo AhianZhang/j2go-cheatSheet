@@ -2,54 +2,48 @@
 
 java 转 go 快速对照表，建议搭配 [smart TOC](https://chrome.google.com/webstore/detail/smart-toc/lifgeihcfpkmmlfjbailfpfhbahhibba) 工具阅读
 
-这个速查表是为了给 *高级 Java 工程师* 快速熟悉 Golang 语言特性准备的。 
+这个速查表是为了给 _高级 Java 工程师_ 快速熟悉 Golang 语言特性准备的。
 
 语言只是工具，都有各自的优势和不足，没必要抬高这个贬低那个，请不要做语言的奴隶！
 
-
-> 说明：目录中带星号 * 的代表这部分内容是针对于 java 侧来说的，在 golang 领域可能没有此概念
-
+> 说明：目录中带星号 \* 的代表这部分内容是针对于 java 侧来说的，在 golang 领域可能没有此概念
 
 # 三方依赖仓库地址
+
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
 <tr><td>
 
-
 https://mvnrepository.com/
-
 
 </td><td>
 
-
 https://pkg.go.dev/
-
 
 </td></tr>
 </tbody></table>
 
 # 包管理工具
+
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
 <tr><td>
 
-
 Maven、Gradle
-
 
 </td><td>
 
-
 Go Modules (go 1.13 设为默认)
-
 
 </td></tr>
 </tbody></table>
 
 # 基础数据类型
-基础数据类型是CPU可以直接进行运算的类型
+
+基础数据类型是 CPU 可以直接进行运算的类型
+
 <table>
 <thead>
 <tr>
@@ -119,23 +113,24 @@ Go Modules (go 1.13 设为默认)
 
 # 声明方式及赋值
 
-
 ## 变量
+
 type: 类型
 
 identifier: 标识符、变量名
 
 value: 值
+
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
 <tr><td>
 
 ```java
-	
+
 type identifier;
 type identifier = value;
-	
+
 ```
 
 </td><td>
@@ -152,6 +147,7 @@ identifier := value
 </table>
 
 ## 常量
+
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
@@ -172,7 +168,9 @@ const num = 0
 </table>
 
 # 循环控制
+
 ## for
+
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
@@ -197,6 +195,7 @@ for i := 0; i < len(arr); i++ {
 </table>
 
 ## for 增强
+
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
@@ -224,6 +223,7 @@ for i,v := range s {
 </table>
 
 ## while
+
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
@@ -250,6 +250,7 @@ for i < 10 {
 </table>
 
 ## switch
+
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
@@ -289,7 +290,9 @@ default:
 </table>
 
 # 集合
+
 ## Array
+
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
@@ -315,15 +318,15 @@ sort.SliceStable(sli, func(a, b int) bool { return sli[a] < sli[b] }) // 如果�
 </td></tr>
 </tbody></table>
 
-
 ## List
+
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
 <tr><td>
 
 ```java
-List<T> list1 = new ArrayList<>(); 
+List<T> list1 = new ArrayList<>();
 List<T> list2 = new LinkedList<>();
 ```
 
@@ -342,6 +345,7 @@ for e := list2.Front(); e != nil; e=e.Next() {
 </tbody></table>
 
 ## Map
+
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
@@ -369,13 +373,14 @@ if ok {
 </tbody></table>
 
 ## Set
+
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
 <tr><td>
 
 ```java
-Set<T> set = new HashSet<>(); 
+Set<T> set = new HashSet<>();
 ```
 
 </td><td>
@@ -390,6 +395,7 @@ set := make(map[T]void)
 </tbody></table>
 
 ## Stack
+
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
@@ -413,6 +419,7 @@ set := make(map[T]void)
 	for len(stack) > 0 {
 		topEle := stack[len(stack)-1] // inspect
 		fmt.Println("top element is: ", topEle)
+        stack[len(stack)-1] = "" // 避免内存泄漏
 		stack = stack[:len(stack)-1] // pop
 		fmt.Println("current statck size: ", len(stack))
 
@@ -427,8 +434,11 @@ set := make(map[T]void)
 </tbody></table>
 
 # I/O
+
 ## 文件操作
+
 ### 读取文件
+
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
@@ -451,6 +461,7 @@ f, err := ioutil.ReadFile("file path")//f is []byte
 # String
 
 ## 分割字符串
+
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
@@ -471,6 +482,7 @@ strs := strings.Split("a,b,c", ",")
 </tbody></table>
 
 ## 是否以 prefix 开头
+
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
@@ -492,6 +504,7 @@ var s string
 </tbody></table>
 
 ## 是否以 suffix 开头
+
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
@@ -507,14 +520,18 @@ var s string
 var s string
 strings.HasSuffix(s,"suffix")
 ```
+
 </td></tr>
 </tbody></table>
 
-# *面向对象编程
+# \*面向对象编程
+
 面向对象是以对象为核心向外拓展的，可以理解为现实环境中的映射。在 java 中表示为 Class，在 golang 中表示为 struct。在设计时会将对象能力通过方法的形式整合在一起并通过权限控制来加强封装，使用接口 interface 来实现多态。
 
 ## 函数
+
 函数是能给调用者返回一些需要的值，可以在任何地方使用
+
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
@@ -546,7 +563,7 @@ type Door struct {
 }
 func open(){
   fmt.Println("door opened")
-  
+
 }
 
 
@@ -556,7 +573,9 @@ func open(){
 </tbody></table>
 
 ## 方法
+
 方法是被定义在类内部，能去修改类的属性，注重类的概念
+
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
@@ -600,7 +619,9 @@ func (door *Door) getSize(){
 </tbody></table>
 
 # 接口
+
 golang 中没有显示的实现
+
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
@@ -637,7 +658,6 @@ class CarLight implements Light {
 }
 ```
 
-
 </td><td>
 
 ```golang
@@ -663,36 +683,32 @@ func main() {
 }
 ```
 
-
-
 </td></tr>
 </tbody></table>
 
 ## 封装
+
 java 和 go 都能够通过一定的规则来控制程序的可见性 scope。
 可见性由低到高：
 
-> java:  default>protect>private>public 
+> java: default>protect>private>public
 
 > go: 小写开头(private) > 大写开头(public)
 
 golang 中大小写可以应用到常量、变量、类型、函数、结构体中
 举例：
+
 ```go
 type User struct{...} User 能够被其他包内的代码访问
 type user struct{...} user 只能包内访问
 ```
+
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
 <tr><td>
 
-
-
 </td><td>
-
-
-
 
 </td></tr>
 </tbody></table>
@@ -704,12 +720,7 @@ type user struct{...} user 只能包内访问
 <tbody>
 <tr><td>
 
-
-
 </td><td>
-
-
-
 
 </td></tr>
 </tbody></table>
@@ -721,18 +732,15 @@ type user struct{...} user 只能包内访问
 <tbody>
 <tr><td>
 
-
-
 </td><td>
-
-
-
 
 </td></tr>
 </tbody></table>
 
 # 并发
+
 ## 锁
+
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
@@ -760,53 +768,42 @@ if(lock.tryLock()){
 </tbody></table>
 
 # 序列化
+
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
 <tr><td>
 
-
-
 </td><td>
-
-
-
 
 </td></tr>
 </tbody></table>
 
 # 服务器
+
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
 <tr><td>
 
-
-
 </td><td>
-
-
-
 
 </td></tr>
 </tbody></table>
 
 # ORM 工具
+
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
 <tr><td>
 
-
 - MyBatis
 - Spring Data
 
-
 </td><td>
 
-
 - Gorm
-
 
 </td></tr>
 </tbody></table>
