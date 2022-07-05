@@ -4,9 +4,11 @@ java 转 go 快速对照表，建议搭配 [smart TOC](https://chrome.google.com
 
 这个速查表是为了给 _高级 Java 工程师_ 快速熟悉 Golang 语言特性准备的。
 
-语言只是工具，都有各自的优势和不足，没必要抬高这个贬低那个，请不要做语言的奴隶！
+语言只是工具，都有各自的优势和不足，在合适的场景用合适的语言
 
 > 说明：目录中带星号 \* 的代表这部分内容是针对于 java 侧来说的，在 golang 领域可能没有此概念
+
+**如果有错误的地方欢迎提 PR 或者 issue**
 
 # 三方依赖仓库地址
 
@@ -524,6 +526,26 @@ strings.HasSuffix(s,"suffix")
 </td></tr>
 </tbody></table>
 
+## 判断是否相等
+
+<table>
+<thead><tr><th>java</th><th>go</th></tr></thead>
+<tbody>
+<tr><td>
+
+```java
+ "".equals("");
+```
+
+</td><td>
+
+```go
+str1 == str2
+```
+
+</td></tr>
+</tbody></table>
+
 # \*面向对象编程
 
 面向对象是以对象为核心向外拓展的，可以理解为现实环境中的映射。在 java 中表示为 Class，在 golang 中表示为 struct。在设计时会将对象能力通过方法的形式整合在一起并通过权限控制来加强封装，使用接口 interface 来隐式实现多态。
@@ -768,14 +790,28 @@ if(lock.tryLock()){
 </tbody></table>
 
 # 序列化
-
+## json
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
 <tr><td>
 
+```java
+// jackson api
+ObjectMapper objectMapper = new ObjectMapper();  
+String jsonStr = objectMapper.writeValueAsString(obj);
+```
 </td><td>
 
+```go
+	user := &user{Name: "ahian", Age: 18}
+	b, err := json.Marshal(user)
+	if err != nil {
+		fmt.Errorf("could not marshal json: %s\n", err)
+		return
+	}
+	fmt.Println(string(b))
+```
 </td></tr>
 </tbody></table>
 
