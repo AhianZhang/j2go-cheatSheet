@@ -499,7 +499,7 @@ strs := strings.Split("a,b,c", ",")
 
 ```go
 var s string
-	strings.HasPrefix(s, "prefix")
+strings.HasPrefix(s, "prefix")
 ```
 
 </td></tr>
