@@ -460,6 +460,26 @@ f, err := ioutil.ReadFile("file path")//f is []byte
 </td></tr>
 </tbody></table>
 
+## 读取命令行输入
+<table>
+<thead><tr><th>java</th><th>go</th></tr></thead>
+<tbody>
+<tr><td>
+
+```java
+
+```
+
+</td><td>
+
+```go
+
+
+```
+
+</td></tr>
+</tbody></table>
+
 # String
 
 ## 分割字符串
@@ -748,7 +768,7 @@ type user struct{...} user 只能包内访问
 </tbody></table>
 
 ## 多态
-
+多态借助于 interface 来实现
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
