@@ -11,7 +11,7 @@ import java.nio.file.Paths;
 
 class IoDemo {
     public static void main(String[] args) throws IOException {
-        String filePath = "/Users/ahianzhang/Documents/personal/j2go-cheatSheet/java/syntax/Main.java";
+        String filePath = "path/j2go-cheatSheet/java/syntax/Main.java";
         byte[] bytes = Files.readAllBytes(Paths.get(filePath));
         System.out.println(new String(bytes));
     }
