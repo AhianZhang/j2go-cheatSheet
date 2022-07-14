@@ -835,6 +835,30 @@ String jsonStr = objectMapper.writeValueAsString(obj);
 </td></tr>
 </tbody></table>
 
+# 时间处理工具
+
+<table>
+<thead><tr><th>java</th><th>go</th></tr></thead>
+<tbody>
+<tr><td>
+
+```java
+
+```
+
+</td><td>
+
+```go
+	now := time.Now() // 当前时间 默认格式：2006-01-02 15:04:05.999999999 -0700 MST
+	fmt.Println(now)
+	format := now.Format("2006-01-02 15:04:05") // 格式化 年月日时分秒
+	fmt.Println(format)
+```
+
+
+</td></tr>
+</tbody></table>
+
 # 服务器
 
 <table>

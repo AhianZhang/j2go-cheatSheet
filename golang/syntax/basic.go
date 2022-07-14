@@ -24,8 +24,8 @@ func main() {
 	for i := 0; i < 10; i++ {
 		fmt.Println(i)
 	}
+	// range
 	str4 := "abc"
-
 	for idx, val := range str4 {
 		fmt.Println("index:", idx, "val:", val)
 	}
