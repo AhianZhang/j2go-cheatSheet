@@ -460,20 +460,52 @@ f, err := ioutil.ReadFile("file path")//f is []byte
 </td></tr>
 </tbody></table>
 
-## 读取命令行输入
+## 监听命令行输入
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
 <tr><td>
 
 ```java
-
+       Scanner scanner = new Scanner(System.in);
+        while (scanner.hasNext()) {
+            System.out.println(scanner.next());
+        }
 ```
 
 </td><td>
 
 ```go
+	input := bufio.NewScanner(os.Stdin)
+	for input.Scan() {
+		fmt.Println(input.Text())
+	}
 
+```
+
+</td></tr>
+</tbody></table>
+
+## 获取命令行参数
+<table>
+<thead><tr><th>java</th><th>go</th></tr></thead>
+<tbody>
+<tr><td>
+
+```java
+       Scanner scanner = new Scanner(System.in);
+        while (scanner.hasNext()) {
+            System.out.println(scanner.next());
+        }
+```
+
+</td><td>
+
+```go
+	input := bufio.NewScanner(os.Stdin)
+	for input.Scan() {
+		fmt.Println(input.Text())
+	}
 
 ```
 

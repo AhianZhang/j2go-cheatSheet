@@ -73,3 +73,39 @@ func (trie *Trie) Search(word string) bool {
 func (trie *Trie) StartWith(word string) bool {
 	return trie.SearchPrefix(word) != nil
 }
+
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
+}
+
+func recur(root *TreeNode) *TreeNode {
+	if root == nil {
+		return nil
+		fmt.Println("root is nil")
+	}
+	fmt.Println(root.Val)
+	root.Left = recur(root.Left)
+	root.Right = recur(root.Right)
+	if root.Val == 0 && root.Left == nil && root.Right == nil {
+		return nil
+	}
+	return root
+}
+func TestTreeNode(t *testing.T) {
+	node := &TreeNode{
+		Val: 1,
+		Left: &TreeNode{
+			Val:   2,
+			Left:  nil,
+			Right: nil,
+		},
+		Right: &TreeNode{
+			Val:   3,
+			Left:  nil,
+			Right: nil,
+		},
+	}
+	recur(node)
+}

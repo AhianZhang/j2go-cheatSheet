@@ -60,10 +60,7 @@ func main() {
 	fmt.Println(os.Args[1:])
 	// 命令行
 	input := bufio.NewScanner(os.Stdin)
-	if input.Scan() {
+	for input.Scan() {
 		fmt.Println(input.Text())
 	}
-
-	arr := [10]int{}
-	fmt.Println(len(arr))
 }
