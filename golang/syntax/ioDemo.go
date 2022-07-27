@@ -13,7 +13,8 @@ type user struct {
 }
 
 func main() {
-	jsonDecode()
+	//jsonDecode()
+	readFile2()
 }
 
 func jsonDecode() {
@@ -25,7 +26,7 @@ func jsonDecode() {
 	}
 	fmt.Println(string(b))
 }
-func readFile() {
+func readFile1() {
 	// 打开文件
 	f, err := ioutil.ReadFile("file path")
 	if err != nil {
@@ -33,4 +34,15 @@ func readFile() {
 		os.Exit(1)
 	}
 	fmt.Println(string(f))
+}
+func readFile2() {
+	// 打开文件
+	file, err := os.Open("file path")
+	if err != nil {
+		return
+	}
+	defer file.Close()
+	buffer := make([]byte, 1024)
+	file.Read(buffer)
+	fmt.Println(string(buffer))
 }
