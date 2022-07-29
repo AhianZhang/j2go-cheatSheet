@@ -794,6 +794,36 @@ type user struct{...} user 只能包内访问
 <tbody>
 <tr><td>
 
+```java
+class Person {
+    private String name;
+
+    public Person(String name) {
+        this.name = name;
+    }
+
+    public void print() {
+        System.out.println("my name is " + name);
+    }
+
+
+}
+
+class Worker extends Person {
+    private final String job;
+
+    public Worker(String name, String job) {
+        super(name);
+        this.job = job;
+    }
+
+    @Override
+    public void print() {
+        System.out.println("my job is " + job);
+    }
+}
+```
+
 </td><td>
 
 ```go
