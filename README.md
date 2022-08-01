@@ -862,6 +862,58 @@ func (worker *Worker) print() {
 
 # 并发
 
+## 等待所有线程工作完成
+
+<table>
+<thead><tr><th>java</th><th>go</th></tr></thead>
+<tbody>
+<tr><td>
+
+```java
+ static int num = 0;
+    public static void main(String[] args) throws InterruptedException {
+        CountDownLatch countDownLatch = new CountDownLatch(100);
+        for (int i = 0; i < 10; i++) {
+            new Thread(() -> {
+                for (int j = 0; j < 10; j++) {
+                    new Thread(()->{
+                        add(countDownLatch);
+                    }).start();
+                }
+            }).start();
+        }
+        countDownLatch.await();
+        System.out.println(num);
+    }
+    private static void add(CountDownLatch countDownLatch){
+            num++;
+            countDownLatch.countDown();
+    }
+```
+
+</td><td>
+
+```go
+var num = 0
+// 计数器
+func main() {
+	var wg sync.WaitGroup
+	for i := 0; i < 10000; i++ {
+		wg.Add(1) // 计数器加 1
+		go add(&wg)
+	}
+	wg.Wait() // 等待计数器归零
+	fmt.Println(num)
+}
+func add(wg *sync.WaitGroup) {
+	num++
+	wg.Done() // 计数器减 1
+}
+```
+
+</td></tr>
+</tbody></table>
+
 ## 锁
 
 <table>
@@ -884,7 +936,19 @@ if(lock.tryLock()){
 </td><td>
 
 ```go
-
+func main() {
+	var lock sync.Mutex
+	for i := 0; i < 10000; i++ {
+		go addByLock(&lock)
+	}
+	time.Sleep(10)
+	fmt.Println(n)
+}
+func addByLock(lock *sync.Mutex) {
+	lock.Lock()
+	n++
+	lock.Unlock()
+}
 ```
 
 </td></tr>
