@@ -864,6 +864,7 @@ func (worker *Worker) print() {
 
 ## 等待所有线程工作完成
 
+非原子操作，可使用 atomic 进行累加计算
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
@@ -953,6 +954,33 @@ func addByLock(lock *sync.Mutex) {
 
 </td></tr>
 </tbody></table>
+
+## Channel
+
+<table>
+<thead><tr><th>java</th><th>go</th></tr></thead>
+<tbody>
+<tr><td>
+
+```java
+
+```
+</td><td>
+
+```go
+channel := make(chan string, 1)
+go func() {
+channel <- "add"
+}()
+go func() {
+val := <-channel
+fmt.Println(val)
+}()
+time.Sleep(time.Second * 2)
+```
+</td></tr>
+</tbody></table>
+
 
 # 序列化
 ## json
