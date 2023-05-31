@@ -109,3 +109,33 @@ func TestTreeNode(t *testing.T) {
 	}
 	recur(node)
 }
+
+func TestTest(t *testing.T) {
+	arr := []int{1, 2, 3}
+	fmt.Println(arr[:1])
+	fmt.Println(arr[1:])
+}
+
+// https://leetcode.cn/problems/deepest-leaves-sum/
+func deepestLeavesSum(root *TreeNode) int {
+	queue := make([]*TreeNode, 1)
+	queue[0] = root
+
+	for len(queue) > 0 {
+		size := len(queue)
+		var levelNodes []int
+		for i := 0; i < size; i++ {
+			node := queue[len(queue)-1]
+			queue = queue[:len(queue)-1]
+			levelNodes = append(levelNodes, node.Val)
+			if node.Left != nil {
+				queue = append(queue, node.Left)
+			}
+			if node.Right != nil {
+				queue = append(queue, node.Right)
+			}
+		}
+		fmt.Println(queue)
+	}
+	return 0
+}

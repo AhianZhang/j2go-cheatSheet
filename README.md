@@ -963,7 +963,7 @@ func addByLock(lock *sync.Mutex) {
 <tr><td>
 
 ```java
-
+无
 ```
 </td><td>
 
@@ -1016,7 +1016,8 @@ String jsonStr = objectMapper.writeValueAsString(obj);
 <tr><td>
 
 ```java
-
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String yearMonthDay = simpleDateFormat.format(new Date());
 ```
 
 </td><td>
