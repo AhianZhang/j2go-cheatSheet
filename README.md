@@ -692,6 +692,23 @@ func (door *Door) getSize(){
 </td></tr>
 </tbody></table>
 
+# 泛型
+<table>
+<thead><tr><th>java</th><th>go</th></tr></thead>
+<tbody>
+<tr><td>
+
+```java
+```
+
+</td><td>
+
+```go
+```
+
+</td></tr>
+</tbody></table>
+
 # 接口
 
 golang 的接口是隐式实现
