@@ -1034,7 +1034,7 @@ String jsonStr = objectMapper.writeValueAsString(obj);
 </tbody></table>
 
 # 服务器
-
+指对外提供服务的程序，一般是通过 REST 方式访问
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
