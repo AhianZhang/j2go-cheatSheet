@@ -5,11 +5,11 @@ public class Main{
      // basic data type
      int num = 1;
      boolean flag = true;
-        char ch = 'a';
-        double d = 1.0;
-        float f = 1.0f;
-        long l = 1L;
-        short s = 1;
+     char ch = 'a';
+     double d = 1.0;
+     float f = 1.0f;
+     long l = 1L;
+     short s = 1;
 
     }    
 }
