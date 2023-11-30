@@ -730,11 +730,17 @@ func (door *Door) getSize(){
 <tr><td>
 
 ```java
+public static <D> void print(D data){
+        System.out.println("your data is " + data);
+    }
 ```
 
 </td><td>
 
 ```go
+func print[D any](data D) {
+	fmt.Print("your data is: ", data)
+}
 ```
 
 </td></tr>
