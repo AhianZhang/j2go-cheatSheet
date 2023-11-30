@@ -435,6 +435,37 @@ set := make(map[T]void)
 </td></tr>
 </tbody></table>
 
+## queue
+
+<table>
+<thead><tr><th>java</th><th>go</th></tr></thead>
+<tbody>
+<tr><td>
+
+```java
+      Queue queue = new PriorityQueue<String>(10);
+        queue.add("hello");
+        queue.add("world");
+        while (!queue.isEmpty()){
+            System.out.println(queue.poll());
+        }
+```
+
+</td><td>
+
+```go
+// using github.com/golang-collections/collections/queue
+q := queue.New()
+	q.Enqueue("hello")
+	q.Enqueue("world")
+	for q.Len() > 0 {
+		fmt.Println(q.Dequeue())
+	}
+```
+
+</td></tr>
+</tbody></table>
+
 # I/O
 
 ## 文件操作

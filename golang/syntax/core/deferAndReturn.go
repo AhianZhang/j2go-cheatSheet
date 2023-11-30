@@ -5,7 +5,7 @@ package main
 import "fmt"
 
 func main() {
-	deferReturnPanicFun()
+	//deferReturnPanicFun()
 
 }
 func deferReturnPanicFun() int {
