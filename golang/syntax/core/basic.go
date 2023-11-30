@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"github.com/golang-collections/collections/queue"
 	"os"
 )
 
@@ -54,6 +55,13 @@ func main() {
 	set["a"] = x
 	if _, ok := sets["a"]; ok {
 		fmt.Println("element exist")
+	}
+	// queue
+	q := queue.New()
+	q.Enqueue("hello")
+	q.Enqueue("world")
+	for q.Len() > 0 {
+		fmt.Println(q.Dequeue())
 	}
 	// var arg string
 	// arg = os.Args[0]

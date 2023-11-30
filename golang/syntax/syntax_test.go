@@ -1,7 +1,8 @@
-package main
+package main_test
 
 import (
 	"fmt"
+	"github.com/golang-collections/collections/queue"
 	"testing"
 	"time"
 )
@@ -138,4 +139,13 @@ func deepestLeavesSum(root *TreeNode) int {
 		fmt.Println(queue)
 	}
 	return 0
+}
+
+func TestQueue(t *testing.T) {
+	q := queue.New()
+	q.Enqueue("hello")
+	q.Enqueue("world")
+	for q.Len() > 0 {
+		fmt.Println(q.Dequeue())
+	}
 }
