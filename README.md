@@ -903,13 +903,64 @@ func (worker *Worker) print() {
 </tbody></table>
 
 ## 多态
-多态借助于 interface 来实现
+多态（Polymorphism）是面向对象编程（OOP）中的一个重要概念，它允许不同的类共享相同的接口或基类，并且在运行时表现出不同的行为。
 <table>
 <thead><tr><th>java</th><th>go</th></tr></thead>
 <tbody>
 <tr><td>
 
+```java
+
+class Animal {
+    void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+@Override
+void makeSound() {
+System.out.println("Dog barks");
+}
+}
+
+public class Main {
+public static void main(String[] args) {
+Animal animal = new Dog();
+animal.makeSound(); // 运行时调用Dog类的makeSound方法
+}
+}
+
+```
 </td><td>
+
+```golang
+type Animal interface {
+    Speak() string
+}
+
+type Dog struct{}
+
+func (d Dog) Speak() string {
+    return "Woof!"
+}
+
+type Cat struct{}
+
+func (c Cat) Speak() string {
+    return "Meow!"
+}
+func main() {
+var animal Animal
+
+animal = Dog{}
+fmt.Println(animal.Speak()) // 输出: Woof!
+
+animal = Cat{}
+fmt.Println(animal.Speak()) // 输出: Meow!
+}
+
+```
 
 </td></tr>
 </tbody></table>
